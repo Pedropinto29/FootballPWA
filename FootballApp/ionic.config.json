@@ -1,0 +1,7 @@
+{
+  "name": "FootballApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
