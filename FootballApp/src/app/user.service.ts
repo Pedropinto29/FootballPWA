@@ -1,5 +1,5 @@
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable, ɵɵresolveBody } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export class User {

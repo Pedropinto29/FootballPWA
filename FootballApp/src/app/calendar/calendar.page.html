@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calendar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h1> Past Games</h1>
+<div *ngFor="let game of games">
+    <ion-card class="card" *ngIf="game.homeScore">
+        <ion-card-title class="header">
+            {{game.date}}
+        </ion-card-title>
+        <ion-card-content>
+            <b>{{game.homeTeam}}</b> <span class="score">{{game.homeScore}}</span>
+            <ion-card-subtitle class="competition">
+                {{game.competition}}
+            </ion-card-subtitle>
+            <b>{{game.awayTeam}}</b> <span class="score">{{game.awayScore}}</span>
+            <button *ngIf="userType" class="cardButton" (click)="edit(game)">Edit game</button>
+        </ion-card-content>  
+    </ion-card>
+</div>
+
+<h1> Next Games</h1>
+<div *ngFor="let game of games">
+    <ion-card class="card" *ngIf="!game.homeScore">
+        
+        <ion-card-title class="header">
+            {{game.date}}
+        </ion-card-title>
+        <ion-card-content>
+            <b>{{game.homeTeam}} </b>
+            <ion-card-subtitle>
+                <span class="time"> {{game.time}}</span>
+                <span class="competition2">{{game.competition}}</span>
+            </ion-card-subtitle>
+            <!-- <p class="competition">{{game.competition}} </p> -->
+            <b>{{game.awayTeam}} </b>
+            <button *ngIf="userType" class="cardButton" (click)="edit(game)">Edit game</button>
+        </ion-card-content>
+        
+    </ion-card>
+</div>
+
+  <!-- <app-explore-container name="Calendar page"></app-explore-container> -->
+</ion-content>

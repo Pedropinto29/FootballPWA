@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Article, ArticleService } from '../article.service';
 import { Router } from '@angular/router';
-import { ArticleService, Article } from '../article-service.service';
+
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss']
 })
-export class HomeComponent  implements OnInit {
-  public appPages = [
-    { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
-  ];
+
+export class HomePage {
+
   articles: Article[] = []
   userType : string = ""
 

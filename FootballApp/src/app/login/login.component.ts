@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { User, UserLogin, UserService } from '../user.service';
 import { Router} from '@angular/router';
-import { HomeComponent } from '../home/home.component';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   userLogin = new UserLogin()
@@ -28,7 +28,7 @@ export class LoginComponent {
             data => {
               console.log(data.token);
               localStorage.setItem('token', data.token)
-              this.router.navigate(['home'])
+              this.router.navigate(['tabs/home'])
             }
           )
         } else{
