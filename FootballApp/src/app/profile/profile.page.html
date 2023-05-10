@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1 class="title">Welcome to your personal page {{user.name}}</h1>
+<div class="data">
+    <br>
+    <div>
+        <b class="label"> Name: </b>
+        <span class="getted"> {{user.name}}</span>
+    </div>
+    <br>
+    <div>
+        <b class="label"> Surname: </b>
+        <span class="getted"> {{user.surname}}</span>
+    </div>
+    <br>
+    <div>
+        <b class="label"> Email: </b>
+        <span class="getted"> {{user.email}}</span>
+    </div>
+    <br>
+    <div *ngIf="user.annualPlace">
+        <b class="label"> Annual place: </b>
+        <span class="getted"> {{user.annualPlace}}</span>
+    </div>
+    <div *ngIf="!user.annualPlace">
+        <button (click) = "annualPlace()"> Get annual place</button>
+    </div>
+</div>
+
+
+</ion-content>
