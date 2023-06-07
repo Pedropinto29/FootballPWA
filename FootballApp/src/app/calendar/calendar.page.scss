@@ -1,102 +1,63 @@
-$primary-color: #333;
-$secondary-color: #555;
+h1{
+  text-align: center;
+}
+ion-card-title.header {
+  text-align: center;
+}
 
-ion-content {
-  [fullscreen=true] {
-    // styles for full screen content
-  }
+ion-card-content b {
+  text-align: left;
+  margin-right: 20px;
+}
+
+ion-card-content .score {
+  text-align: left;
+}
+
+ion-card-subtitle.competition {
+  text-align: right;
+}
+
+ion-card-subtitle.competition2 {
+  text-align: right;
+}
+
+.cardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 46.5%;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
   
-  ion-header[collapse=condense] {
-    ion-toolbar {
-      ion-title[size=large] {
-        // styles for large title
-      }
-    }
-  }
-  
-  h1 {
-    // styles for page headings
-  }
-  
-  .card {
-    // styles for game cards
-    padding-bottom: 20px;
-    border: 1px solid grey;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    
-    .header {
-      // styles for card header
-      text-align: center;
-      font-size: 20px;
-    }
-    
-    ion-card-content {
-      // styles for card content
-      b {
-        display: inline-block;
-        padding-right: 20px;
-        font-size: 15px;
-        width: 150px;
-        text-align: left;
-      }
-      
-      .score {
-        display: inline-block;
-        padding-left: 20px;
-      }
-      
-      .competition {
-        // styles for competition
-        text-align: end;
-        color: black;
-        font-size: 20px;
-      }
-      
-      .competition2 {
-        // styles for competition 2
-        display: inline-block;
-        color: black;
-        font-size: 20px;
-        float: right;
-        width: 500px;
-        text-align: right;
-      }
-      
-      .time {
-        // styles for game time
-        display: inline-block;
-        align-items: center;
-        color: black;
-        font-size: 20px;
-        padding-left: 48%;
-        box-sizing: border-box;
-      }
-      
-      button {
-        // styles for edit button
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        background-color: $primary-color;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        
-        &:hover {
-          background-color: $secondary-color;
-        }
-      }
-    }
-    
-    .cardButton {
-      // styles for card button container
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 46.5%;
-    }
+  &:hover {
+    background-color: #555;
   }
 }
+
+.subtitle2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle2 .time {
+  margin-left: 48.5%;
+  text-align: center;
+}
+
+.subtitle2 .competition2 {
+  text-align: right;
+}
+
+
+
